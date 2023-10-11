@@ -1,0 +1,17 @@
+{
+  "rpc_url": "http://testnet-proposer0.hypr.network:8545",
+  "chain_id": 60005,
+  "chain_name": "hyprtest",
+  "randao": "0xA886B863E8b4be9f6D7090DcB30fE57d5dA920AB",
+  "randao_wrapper": "0x8C8B4cc03652E502E4cBa5a434E215b080E01770",
+  "randao_wrapper_admin": "0xd1b08a36693F3407F89CF1B9c86708aC8d675Fe4",
+  "randao_wrapper_factory": "0x0216428761C8291c6c2E45c23932E79109Be8553",
+  "randao_consumer_mock1": "0xD286a34a35EB9e36Ad4b074Fd6e643424823D3A9",
+  "randao_consumer_mock2": "0x041DEe0F52aa81E9dD02753C220E68F8dEE99E4A",
+  "sec_key": "0xe6e749be57f20c51ddabb97b3dba35e969f41482e1cbd4e6107091fc548c89a7",
+  "max_randao_wrapper": 10,
+  "deposit": "300000000000",
+  "bounty": "300000000000",
+  "maxTxFee": "10000000000",
+  "isCheck": true
+}

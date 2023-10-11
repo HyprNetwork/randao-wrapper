@@ -1,0 +1,4 @@
+[submodule "randao"]
+	path = contracts/interface/randao
+	url = https://github.com/HyprNetwork/randao-wrapper.git
+	branch = master
