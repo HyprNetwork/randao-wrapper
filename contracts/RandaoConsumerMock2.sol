@@ -5,16 +5,13 @@ import "./interface/IRandaoConsumer.sol";
 import "./interface/IRandaoWrapper.sol";
 
 contract RandaoConsumerMock2 is IRandaoConsumer {
-    address randaoWrapper;
+    address public randaoWrapper;
 
     constructor(address _randaoWrapper) {
         randaoWrapper = _randaoWrapper;
     }
 
-    function rawFulfillRandomWords(
-        uint256 requestId,
-        uint256[] memory randomWords
-    ) external {
+    function rawFulfillRandomWords(uint256 requestId, uint256[] memory randomWords) external {
         require(false, "rawFulfillRandomWords error");
     }
 

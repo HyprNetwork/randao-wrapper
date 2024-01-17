@@ -4,3 +4,7 @@ coverage.json
 
 # Hardhat files
 build
+.idea
+.vscode
+
+package-lock.json

@@ -5,12 +5,9 @@ import "./interface/IRandaoConsumer.sol";
 import "./interface/IRandaoWrapper.sol";
 
 contract RandaoConsumerMock1 is IRandaoConsumer {
-    address randaoWrapper;
+    address public randaoWrapper;
 
-    event LogRandaoConsumerRes(
-        uint256 indexed requestId,
-        uint256[] randomWords
-    );
+    event LogRandaoConsumerRes(uint256 indexed requestId, uint256[] randomWords);
     event LogRandaoConsumerReq(uint256 indexed requestId);
 
     // address self;
@@ -20,21 +17,12 @@ contract RandaoConsumerMock1 is IRandaoConsumer {
         // self = address(this);
     }
 
-    function rawFulfillRandomWords(
-        uint256 requestId,
-        uint256[] memory randomWords
-    ) external {
+    function rawFulfillRandomWords(uint256 requestId, uint256[] memory randomWords) external {
         emit LogRandaoConsumerRes(requestId, randomWords);
     }
 
     function testRequestRandomWords() external returns (uint256) {
-        uint256 requestId = IRandaoWrapper(randaoWrapper).requestRandomWords(
-            "",
-            0,
-            0,
-            0,
-            10
-        );
+        uint256 requestId = IRandaoWrapper(randaoWrapper).requestRandomWords("", 0, 0, 0, 10);
         emit LogRandaoConsumerReq(requestId);
         return requestId;
     }

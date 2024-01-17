@@ -2,8 +2,5 @@
 pragma solidity ^0.8.9;
 
 interface IRandaoConsumer {
-    function rawFulfillRandomWords(
-        uint256 requestId,
-        uint256[] memory randomWords
-    ) external;
+    function rawFulfillRandomWords(uint256 requestId, uint256[] memory randomWords) external;
 }
