@@ -20,16 +20,15 @@ contract RandaoWrapper is IRandaoWrapper {
     bool public isCheck;
 
     constructor(address _randao, address _admin, uint256 _deposit, uint256 _bounty, uint256 _maxTxFee, bool _isCheck) {
+        require(bounty >= deposit, "bounty is too less1");
+        require((deposit / maxTxFee / 4) > 0, "deposit is too less1!!!");
+
         admin = _admin;
         randao = IRandao(_randao);
-
         deposit = _deposit;
         bounty = _bounty;
         maxTxFee = _maxTxFee;
         isCheck = _isCheck;
-
-        require(bounty >= deposit, "bounty is too less1");
-        require((deposit / maxTxFee / 4) > 0, "deposit is too less1!!!");
     }
 
     modifier adminCheck(address caller) {
